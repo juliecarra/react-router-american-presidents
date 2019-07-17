@@ -1,68 +1,97 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Router American Presidents
 
-## Available Scripts
+## To start the project
 
-In the project directory, you can run:
+To start the project, clone the project (fork it before and clone the forked version if you want to push later), install the packages and start the React applicaiton:
 
-### `npm start`
+```
+git clone https://github.com/ironhack-dev-squad-144/react-router-american-presidents
+cd react-router-american-presidents
+npm install
+npm start
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Information about React Router
 
-### `npm test`
+### Official documetation
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Official documention: https://reacttraining.com/react-router/web/guides/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
+```
+$ npm install react-router-dom
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Example of Import
 
-### `npm run eject`
+```javascript
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### List of React Router Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<table>
+  <tr>
+    <th> Component </th>
+    <th> Description </th>
+    <th width="30%"> Main Props </td>
+  </tr>
+  <tr>
+    <td><code>&lt;BrowserRouter&gt;</code></td>
+    <td>Router Component that should wrap your application</td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;Route&gt;</code></td>
+    <td>When the url matches its props <code>path</code>, it renders its content</td>
+    <td>
+      <ul>
+        <li><code>path</code>: string</li>
+        <li><code>component</code>: Component</li>
+        <li><code>render</code>: func</li>
+        <li><code>exact</code>: bool</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;Switch&gt;</code></td>
+    <td>Group <code>&lt;Route&gt;</code> together and display maximum 1</td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;Link&gt;</code></td>
+    <td>Replace the <code>&lt;a&gt;</code> tag of HTML in React Router</td>
+    <td>
+      <ul>
+        <li><code>to</code>: string</li>
+        <li><code>to</code>: object</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;NavLink&gt;</code></td>
+    <td>A special version of the <code>&lt;Link&gt;</code> that will add styling attributes to the rendered element when it matches the current URL</td>
+    <td>
+      <ul>
+        <li><code>activeClassName</code>: string</li>
+        <li><code>activeStyle</code>: object</li>
+        <li><code>exact</code>: bool</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><code>&lt;Redirect&gt;</code></td>
+    <td>Will navigate to a new location</td>
+    <td>
+      <ul>
+        <li><code>to</code>: string</li>
+      </ul>
+    </td>
+  </tr>
+</table>
